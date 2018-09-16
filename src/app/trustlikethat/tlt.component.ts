@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-tlt',
+  templateUrl: './tlt.component.html',
+  styleUrls: ['./tlt.component.css']
 })
-export class AppComponent implements OnInit{
+export class TltComponent implements OnInit{
   title = 'trustlikethat';
 
   @ViewChild('container') container: ElementRef;

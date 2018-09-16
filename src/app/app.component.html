@@ -1,15 +1,1 @@
 
-<img (click)="imLookingForHarry()" *ngIf="!openUpThatButton" class="andre" src="assets/iWouldLikeToBuyACarToday.png" alt="Open up that button!">
-<p *ngIf="!openUpThatButton" class="button-text">Open up that button!</p>
-
-<div *ngIf="openUpThatButton">
-  <div #container class="harry-container">
-
-    <img #harry class="harry" src="assets/harry.jpg">
-
-  </div>
-
-  <p class="trust-text" *ngIf="trust">
-    I don't trust like that!
-  </p>
-</div>

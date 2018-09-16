@@ -1,71 +1,15 @@
-import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <router-outlet>
+
+    </router-outlet>
+  `
 })
-export class AppComponent implements OnInit{
-  title = 'trustlikethat';
-
-  @ViewChild('container') container: ElementRef;
-  @ViewChild('harry') harry: ElementRef;
-  trust = false;
-  openUpThatButton = false;
-
-  ngOnInit(){
-    document.body.style.backgroundColor = "dodgerblue";
-  }
-
-
-  imLookingForHarry(){
-    this.openUpThatButton = true;
-    setTimeout(()=> {
-      this.birdUp();
-      this.dun(this.harry);
-      this.dunn(this.harry);
-      this.dunnn(this.harry);
-      this.iDontTrustLikeThat();
-    });
-  }
-
-  birdUp(){
-    let audio = new Audio();
-    audio.src = "assets/idonttrustsomethinglikethat.mp3";
-    audio.load();
-    audio.play();
-  }
-
-  dun(harry){
-    setTimeout(() => {
-      this.container.nativeElement.style.top = "calc(50% - 280px)";
-      this.container.nativeElement.style.left = "calc(50% - 280px)";
-      this.harry.nativeElement.style.height = "110%";
-      this.harry.nativeElement.style.width = "110%";
-    },300)
-  }
-
-  dunn(harry){
-    setTimeout(() => {
-      this.container.nativeElement.style.top = "calc(50% - 307px)";
-      this.container.nativeElement.style.left = "calc(50% - 307px)";
-      this.harry.nativeElement.style.height = "120%";
-      this.harry.nativeElement.style.width = "120%";
-    },600)
-  }
-
-  dunnn(harry){
-    setTimeout(() => {
-      this.container.nativeElement.style.top = "calc(50% - 333px)";
-      this.container.nativeElement.style.left = "calc(50% - 333px)";
-      this.harry.nativeElement.style.height = "130%";
-      this.harry.nativeElement.style.width = "130%";
-    },900)
-  }
-
-  iDontTrustLikeThat(){
-    setTimeout(() => {
-      this.trust = true;
-    },1800)
-  }
-}
+export class AppComponent { }
+// <h1>Angular Router</h1>
+//
+// <a routerLink="/trust-like-that" routerLinkActive="active">Open up that button</a>
+// <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
